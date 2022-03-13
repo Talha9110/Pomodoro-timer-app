@@ -1,13 +1,16 @@
 let seconds = 60;
-let minutes = 24;
+let min = document.querySelector(".workinterval").value;
+let minutes = min - 1;
 let displaySecs = 0;
 let displayMins = 0;
 let Interval;
 let btn = document.getElementById("dis");
 let btn1 = document.getElementById("dis1");
 let btn2 = document.getElementById("dis2");
+let brak = document.querySelector(".breakinterval").value;
 const taskName = document.querySelector(".taskname");
-// for input field
+
+// for getting input field and seeing buttons
 taskName.addEventListener("keyup", (e) => {
 	e.preventDefault();
 	if (e.target.value.trim() != "") {
@@ -32,6 +35,7 @@ const clear = document.querySelector(".reset");
 clear.addEventListener("click", (e) => {
 	e.preventDefault;
 	document.getElementById("myInput").value = "";
+	document.getElementById("displayTime").innerText = "00:00";
 	btn.disabled = true;
 	btn1.disabled = true;
 	btn2.disabled = true;
@@ -78,7 +82,8 @@ stop.addEventListener("click", (e) => {
 	clearInterval(Interval);
 	document.getElementById("displayTime").innerHTML = "00:00";
 	seconds = 60;
-	minutes = 24;
+	let min = document.querySelector(".workinterval").value;
+	let minutes = min - 1;
 	const tasks = document.querySelector(".completedList > ol");
 	tasks.innerHTML += `<strong><li>${taskName.value} is completed in ${displayMins} mins and ${displaySecs} secs</li></strong>`;
 });

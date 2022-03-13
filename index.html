@@ -25,21 +25,21 @@
         <div id="input" class="my-4 d-flex justify-content-center">
             <input type="text" class="taskname mx-2 text-center" id="myInput" placeholder="Enter Your Task Here"
                 value="">
-            <button class="reset">Reset Field</button>
+            <button class="reset">Reset Fields</button>
         </div>
         <div class="my-4 d-flex flex-column justify-content-center align-items-center">
             <div>
                 <label>Work Time</label>
-                <input type=" number" class="workinterval text-center" value="25" readonly>
+                <input type=" number" id="wk" class="workinterval text-center" value="25" readonly>
             </div>
             <div class="my-4">
                 <label>Break Time</label>
-                <input type=" number" class="breakinterval text-center" value="5" readonly>
+                <input type=" number" id="bk" class="breakinterval text-center" value="5" readonly>
             </div>
         </div>
         <div id="actionbtn" class="d-flex justify-content-center">
             <button class="start mx-3" id="dis" disabled>Start</button>
-            <button class="pause mx-3" id="dis2" disabled>Pause</button>
+            <button class="pause mx-3" id="dis2" disabled>Take Break</button>
             <button class="stop mx-3" id="dis1" disabled>Stop</button>
         </div>
         <div id="completedtasks" class="my-4 text-center">
